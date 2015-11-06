@@ -29,6 +29,7 @@ class ProductAttributeValueSaleLine(models.Model):
     @api.depends('value', 'sale_line.product_template', 'size_x','size_y','size_z') 
     def _get_qty(self): 
         mp_qty = 1
+        size_x = 1
         for mpqty in self.value.price_ids:
             if mpqty.product_tmpl_id.id == self.sale_line.product_template.id:
                 mp_qty = mpqty.raw_qty
