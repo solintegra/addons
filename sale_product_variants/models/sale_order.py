@@ -82,10 +82,9 @@ class ProductAttributeValueSaleLine(models.Model):
         compute='_get_possible_attribute_values', readonly=True)
     mp_qty = fields.Float(compute='_get_qty', readonly=False, string='Cantidad', help="Cantidad de materia prima a Utilizar")
     price_extra = fields.Float(
-        compute='_get_price_extra', readonly=False, string='Precio Unitario',
+        compute='_get_price_extra', readonly=False, string='Precio',
         digits=dp.get_precision('Product Price'),
-        help="Price Extra: Extra price for the variant with this attribute"
-        " value on sale price. eg. x00 price extra, 1000 + 200 = 1200.")
+        help="")
     size_x = fields.Float(digits=(16,2), string='Largo')
     size_y = fields.Float(digits=(16,2), string='Ancho')
     size_z = fields.Float(digits=(16,2), string='qty')
