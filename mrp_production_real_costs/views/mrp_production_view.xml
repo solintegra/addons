@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="mrp_production_project_form_view_inh_estimatedcost" model="ir.ui.view">
+            <field name="name">mrp.production.project.form.view.inh.estimatedcost</field>
+            <field name="model">mrp.production</field>
+            <field name="inherit_id" ref="mrp_production_project_estimated_cost.mrp_production_form_view_inh_estimatedcost"/>
+            <field name="arch" type="xml">
+                <field name="product_manual_cost" position="after">
+                    <field name="real_cost" attrs="{'invisible': [('state', '!=', 'done')]}"/>
+                    <field name="unit_real_cost" attrs="{'invisible': [('state', '!=', 'done')]}"/>
+                </field>
+            </field>
+        </record>
+        <record id="mrp_production_tree_view_inh_realcost" model="ir.ui.view">
+            <field name="name">mrp.production.tree.view.inh.realcost</field>
+            <field name="model">mrp.production</field>
+            <field name="inherit_id" ref="mrp_production_project_estimated_cost.mrp_production_tree_view_inh_estimatedcost"/>
+            <field name="arch" type="xml">
+                <field name="avg_cost" position="after">
+                    <field name="real_cost" />
+                    <field name="percentage_difference" />
+                </field>
+            </field>
+        </record>
+    </data>
+</openerp>

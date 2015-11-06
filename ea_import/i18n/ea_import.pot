@@ -1,0 +1,1290 @@
+# Translation of OpenERP Server.
+# This file contains the translation of the following modules:
+#	* ea_import
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenERP Server 7.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-03-04 15:08+0000\n"
+"PO-Revision-Date: 2015-03-04 15:08+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ea_import
+#. openerp-web
+#: code:addons/ea_import/static/src/js/import.js:435
+#, python-format
+msgid "(%d more)"
+msgstr ""
+
+#. module: ea_import
+#: selection:ea_export.config,quotechar:0
+#: selection:ea_import.chain,delimiter:0
+msgid "<\"> - Double quotation mark"
+msgstr ""
+
+#. module: ea_import
+#: selection:ea_export.config,quotechar:0
+#: selection:ea_import.chain,delimiter:0
+msgid "<'> - Single quotation mark"
+msgstr ""
+
+#. module: ea_import
+#: selection:ea_export.config,delimiter:0
+#: selection:ea_import.chain,separator:0
+msgid "<,> - Coma"
+msgstr ""
+
+#. module: ea_import
+#: selection:ea_export.config,delimiter:0
+#: selection:ea_import.chain,separator:0
+msgid "<;> - Semicolon"
+msgstr ""
+
+#. module: ea_import
+#: selection:ea_export.config,delimiter:0
+#: selection:ea_import.chain,separator:0
+msgid "<SPACE> - Space"
+msgstr ""
+
+#. module: ea_import
+#: selection:ea_export.config,delimiter:0
+#: selection:ea_import.chain,separator:0
+msgid "<TAB> - Tab"
+msgstr ""
+
+#. module: ea_import
+#. openerp-web
+#: code:addons/ea_import/static/src/js/import.js:255
+#, python-format
+msgid "A single column was found in the file, this often means the file separator is incorrect"
+msgstr ""
+
+#. module: ea_import
+#: selection:ea_import.template.line,many2one_rel_type:0
+msgid "Active ID"
+msgstr ""
+
+#. module: ea_import
+#: view:ea_export.config:0
+msgid "Add report"
+msgstr ""
+
+#. module: ea_import
+#: field:ea_import.template.line,boolean_field_ids:0
+msgid "Boolean Fields"
+msgstr ""
+
+#. module: ea_import
+#: field:ea_import.template.line.boolean_field,boolean_value:0
+msgid "Boolean Value"
+msgstr ""
+
+#. module: ea_import
+#: field:ir.actions.report.xml,csv_export:0
+msgid "CSV Export"
+msgstr ""
+
+#. module: ea_import
+#: selection:ea_import.chain,type:0
+#: selection:import_wizard,type:0
+msgid "CSV Import"
+msgstr ""
+
+#. module: ea_import
+#: field:ea_import.template.line,calculated:0
+msgid "Calculated"
+msgstr ""
+
+#. module: ea_import
+#: field:ea_import.template.line,calc_field_ids:0
+msgid "Calculated Field"
+msgstr ""
+
+#. module: ea_import
+#: view:import_wizard:0
+msgid "Cancel"
+msgstr ""
+
+#. module: ea_import
+#: selection:ea_export.config,charset:0
+#: selection:ea_import.chain,charset:0
+msgid "Central European (Windows 1252)"
+msgstr ""
+
+#. module: ea_import
+#. openerp-web
+#: code:addons/ea_import/static/src/js/import.js:180
+#: code:addons/ea_import/static/src/js/import.js:191
+#, python-format
+msgid "Comma"
+msgstr ""
+
+#. module: ea_import
+#: field:ea_import.template.unique.rule,comparison_model_id:0
+msgid "Comparison Model"
+msgstr ""
+
+#. module: ea_import
+#: model:ir.ui.menu,name:ea_import.menu_configs
+msgid "Configs"
+msgstr ""
+
+#. module: ea_import
+#: field:ea_import.template,create_new:0
+msgid "Create New"
+msgstr ""
+
+#. module: ea_import
+#: field:ea_import.template,create_unique_only:0
+msgid "Create Unique only"
+msgstr ""
+
+#. module: ea_import
+#: help:ea_import.template,create_unique_only:0
+msgid "Create record only if one matching key does not already exist.  Do not use with 'update'."
+msgstr ""
+
+#. module: ea_import
+#: selection:ea_export.config,charset:0
+#: selection:ea_import.chain,charset:0
+msgid "Cyrillic (Windows 1251)"
+msgstr ""
+
+#. module: ea_import
+#: help:ea_import.template.line,time_format:0
+msgid "DIRECTIVE       MEANING\n"
+"%a	Locale’s abbreviated weekday name.\n"
+"%A	Locale’s full weekday name.\n"
+"%b	Locale’s abbreviated month name.\n"
+"%B	Locale’s full month name.\n"
+"%c	Locale’s appropriate date and time representation.\n"
+"%d	Day of the month as a decimal number [01,31].\n"
+"%H	Hour (24-hour clock) as a decimal number [00,23].\n"
+"%I	Hour (12-hour clock) as a decimal number [01,12].\n"
+"%j	Day of the year as a decimal number [001,366].\n"
+"%m	Month as a decimal number [01,12].\n"
+"%M	Minute as a decimal number [00,59].\n"
+"%p	Locale’s equivalent of either AM or PM.\n"
+"%S	Second as a decimal number [00,61].\n"
+"%U	Week number of the year (Sunday as the first day of the week) as a decimal number [00,53]. All days in a new year preceding the first Sunday are considered to be in week 0.\n"
+"%w	Weekday as a decimal number [0(Sunday),6].\n"
+"%W	Week number of the year (Monday as the first day of the week) as a decimal number [00,53]. All days in a new year preceding the first Monday are considered to be in week 0.\n"
+"%x	Locale’s appropriate date representation.\n"
+"%X	Locale’s appropriate time representation.\n"
+"%y	Year without century as a decimal number [00,99].\n"
+"%Y	Year with century as a decimal number.\n"
+"%Z	Time zone name (no characters if no time zone exists).\n"
+"%%	A literal '%' character.),"
+msgstr ""
+
+#. module: ea_import
+#: field:mysql.config,db:0
+msgid "Database"
+msgstr ""
+
+#. module: ea_import
+#: selection:ea_import.template.line,many2one_rel_type:0
+msgid "Database ID"
+msgstr ""
+
+#. module: ea_import
+#: field:ea_import.scheduler.log,date_time:0
+msgid "Date"
+msgstr ""
+
+#. module: ea_import
+#: field:ea_import.template.line,default_value:0
+msgid "Default Value"
+msgstr ""
+
+#. module: ea_import
+#: field:ea_export.config,delimiter:0
+#: field:ea_import.chain,delimiter:0
+msgid "Delimiter"
+msgstr ""
+
+#. module: ea_import
+#: model:res.groups,name:ea_import.group_ea_import
+msgid "EA Import"
+msgstr ""
+
+#. module: ea_import
+#: field:ea_import.template.unique.rule,template_id:0
+msgid "EA import template"
+msgstr ""
+
+#. module: ea_import
+#: field:ea_export.config,charset:0
+#: field:ea_import.chain,charset:0
+msgid "Encoding"
+msgstr ""
+
+#. module: ea_import
+#. openerp-web
+#: code:addons/ea_import/static/src/js/import.js:78
+#, python-format
+msgid "Encoding:"
+msgstr ""
+
+#. module: ea_import
+#: code:addons/ea_import/ea_import_chain.py:106
+#: code:addons/ea_import/ea_import_chain.py:159
+#: code:addons/ea_import/ea_import_chain.py:182
+#: code:addons/ea_import/ea_import_template_line.py:165
+#: code:addons/ea_import/ea_import_template_line.py:167
+#, python-format
+msgid "Error !"
+msgstr ""
+
+#. module: ea_import
+#: code:addons/ea_import/ea_import_chain.py:142
+#, python-format
+msgid "Error!"
+msgstr ""
+
+#. module: ea_import
+#. openerp-web
+#: code:addons/ea_import/static/src/js/import.js:412
+#, python-format
+msgid "Everything seems valid."
+msgstr ""
+
+#. module: ea_import
+#: help:ea_import.template,post_import_hook:0
+msgid "Execute method after importing all records.\n"
+"<target_model>.<function_name>(cr, uid, ids_of_imported_records, context=context)"
+msgstr ""
+
+#. module: ea_import
+#: view:ea_export.config:0
+#: model:ir.actions.act_window,name:ea_import.ea_export_config_action
+#: field:ir.actions.report.xml,export_config_id:0
+msgid "Export config"
+msgstr ""
+
+#. module: ea_import
+#: view:ea_export.config:0
+msgid "Export configs"
+msgstr ""
+
+#. module: ea_import
+#: model:ir.ui.menu,name:ea_import.ea_export_config_menu
+msgid "Export configuration"
+msgstr ""
+
+#. module: ea_import
+#: field:ea_export.config,filename:0
+msgid "Export filename"
+msgstr ""
+
+#. module: ea_import
+#: view:import.ftp_config:0
+msgid "FTP Config"
+msgstr ""
+
+#. module: ea_import
+#: field:ea_import.chain,ftp_config_id:0
+#: view:import.ftp_config:0
+msgid "FTP Configuration"
+msgstr ""
+
+#. module: ea_import
+#: model:ir.actions.act_window,name:ea_import.action_ftp_config
+msgid "FTP config"
+msgstr ""
+
+#. module: ea_import
+#: model:ir.ui.menu,name:ea_import.menu_ftp_configuration
+msgid "FTP configuration"
+msgstr ""
+
+#. module: ea_import
+#: selection:ea_import.scheduler.log,state:0
+msgid "Failed"
+msgstr ""
+
+#. module: ea_import
+#: field:ea_import.template.line,target_field:0
+msgid "Field Name"
+msgstr ""
+
+#. module: ea_import
+#: field:ea_import.template.line,field_type:0
+msgid "Field Type"
+msgstr ""
+
+#. module: ea_import
+#: help:ea_import.template.line.calc_field,name:0
+msgid "Field description. Just for reference"
+msgstr ""
+
+#. module: ea_import
+#: field:ea_import.template.line.calc_field,column_number:0
+msgid "Field number"
+msgstr ""
+
+#. module: ea_import
+#: field:ea_import.template.line,real_field_type:0
+msgid "Field type"
+msgstr ""
+
+#. module: ea_import
+#: code:addons/ea_import/ea_import_template_line.py:165
+#, python-format
+msgid "For %s/%s relation there more then 1 record. CSV row number %i."
+msgstr ""
+
+#. module: ea_import
+#: view:ea_export.config:0
+msgid "Generate CSV"
+msgstr ""
+
+#. module: ea_import
+#. openerp-web
+#: code:addons/ea_import/static/src/js/import.js:459
+#, python-format
+msgid "Get all possible values"
+msgstr ""
+
+#. module: ea_import
+#: field:ea_export.config,header:0
+#: field:ea_import.chain,header:0
+msgid "Header"
+msgstr ""
+
+#. module: ea_import
+#: field:ea_import.template.line,header_column_name:0
+msgid "Header Column Name"
+msgstr ""
+
+#. module: ea_import
+#. openerp-web
+#: code:addons/ea_import/static/src/js/import.js:446
+#, python-format
+msgid "Here are the possible values:"
+msgstr ""
+
+#. module: ea_import
+#: field:import.ftp_config,host:0
+#: field:mysql.config,host:0
+msgid "Host"
+msgstr ""
+
+#. module: ea_import
+#: help:ea_import.template.line,match_limit:0
+msgid "If defined, will select one record with given order from several found for template line"
+msgstr ""
+
+#. module: ea_import
+#. openerp-web
+#: code:addons/ea_import/static/src/xml/import.xml:7
+#: view:import_wizard:0
+#, python-format
+msgid "Import"
+msgstr ""
+
+#. module: ea_import
+#: view:ea_import.chain:0
+#: field:ea_import.log,chain_id:0
+#: field:ea_import.template,chain_id:0
+#: field:import_wizard,chain_id:0
+#: model:ir.actions.act_window,name:ea_import.ea_import_chain_action
+msgid "Import Chain"
+msgstr ""
+
+#. module: ea_import
+#: view:ea_import.chain:0
+#: model:ir.ui.menu,name:ea_import.ea_import_chain_menu
+msgid "Import Chains"
+msgstr ""
+
+#. module: ea_import
+#: view:ea_import.chain:0
+msgid "Import Data"
+msgstr ""
+
+#. module: ea_import
+#: field:ea_import.chain,log_ids:0
+#: view:ea_import.log:0
+msgid "Import Log"
+msgstr ""
+
+#. module: ea_import
+#: view:ea_import.chain.result:0
+msgid "Import Result"
+msgstr ""
+
+#. module: ea_import
+#: field:ea_import.chain,result_ids:0
+#: field:ea_import.log,result_ids:0
+#: field:ea_import.scheduler.log,result_ids:0
+msgid "Import Results"
+msgstr ""
+
+#. module: ea_import
+#: model:ir.actions.act_window,name:ea_import.ea_import_scheduler_action
+#: model:ir.ui.menu,name:ea_import.ea_import_scheduler_menu
+msgid "Import Scheduler"
+msgstr ""
+
+#. module: ea_import
+#: view:ea_import.template:0
+msgid "Import Template"
+msgstr ""
+
+#. module: ea_import
+#: model:ir.actions.act_window,name:ea_import.ea_import_template_line_action
+msgid "Import Template Lines"
+msgstr ""
+
+#. module: ea_import
+#: field:ea_import.template.unique.rule,source_model_id:0
+msgid "Import Template Model"
+msgstr ""
+
+#. module: ea_import
+#: model:ir.actions.act_window,name:ea_import.ea_import_template_line_calc_field_action
+msgid "Import Template line.calc_fields"
+msgstr ""
+
+#. module: ea_import
+#: field:ea_import.chain.result,import_time:0
+#: field:ea_import.log,import_time:0
+msgid "Import Time"
+msgstr ""
+
+#. module: ea_import
+#: model:ir.actions.act_window,name:ea_import.ea_import_template_action
+#: model:ir.ui.menu,name:ea_import.ea_import_menu
+msgid "Import Tool"
+msgstr ""
+
+#. module: ea_import
+#: field:ea_import.chain,type:0
+#: field:import_wizard,type:0
+msgid "Import Type"
+msgstr ""
+
+#. module: ea_import
+#: field:ea_import.template,matching_rules_ids:0
+msgid "Import Unique Rule"
+msgstr ""
+
+#. module: ea_import
+#: view:import_wizard:0
+msgid "Import Wizard"
+msgstr ""
+
+#. module: ea_import
+#: field:ea_import.scheduler,import_chain_id:0
+msgid "Import chain"
+msgstr ""
+
+#. module: ea_import
+#: view:ea_export.config:0
+msgid "Import config"
+msgstr ""
+
+#. module: ea_import
+#: selection:ea_import.chain,type:0
+#: selection:import_wizard,type:0
+msgid "Import from ftp server"
+msgstr ""
+
+#. module: ea_import
+#: view:ea_import.log:0
+msgid "Import record results"
+msgstr ""
+
+#. module: ea_import
+#: field:import_wizard,import_file:0
+msgid "Importing file"
+msgstr ""
+
+#. module: ea_import
+#: field:ea_import.scheduler,input_directory:0
+msgid "Input Directory"
+msgstr ""
+
+#. module: ea_import
+#: code:addons/ea_import/ea_import_chain.py:183
+#, python-format
+msgid "Invalid File or template definition. You have less columns in file than in template. Check the file separator or delimiter or template."
+msgstr ""
+
+#. module: ea_import
+#: field:ea_import.template.line,key_field:0
+msgid "Key field for updating"
+msgstr ""
+
+#. module: ea_import
+#: selection:ea_export.config,charset:0
+#: selection:ea_import.chain,charset:0
+msgid "Latin 9 (ISO)"
+msgstr ""
+
+#. module: ea_import
+#: field:ea_import.log.line,name:0
+msgid "Log"
+msgstr ""
+
+#. module: ea_import
+#: field:ea_import.log.line,log_id:0
+msgid "Log ID"
+msgstr ""
+
+#. module: ea_import
+#: field:ea_import.log,log_line:0
+#: view:ea_import.log.line:0
+msgid "Log Line"
+msgstr ""
+
+#. module: ea_import
+#: view:ea_import.log:0
+#: field:ea_import.scheduler.log,log_notes:0
+msgid "Log Notes"
+msgstr ""
+
+#. module: ea_import
+#: view:ea_import.scheduler:0
+#: field:ea_import.scheduler,log_ids:0
+msgid "Logs"
+msgstr ""
+
+#. module: ea_import
+#: model:ir.actions.act_window,name:ea_import.action_mysql_config
+msgid "MYSQL config"
+msgstr ""
+
+#. module: ea_import
+#: model:ir.ui.menu,name:ea_import.menu_mysql_configuration
+msgid "MYSQL configuration"
+msgstr ""
+
+#. module: ea_import
+#: field:ea_import.template.line,match_limit:0
+msgid "Match Limit"
+msgstr ""
+
+#. module: ea_import
+#: selection:ea_import.template.line,match_limit:0
+msgid "Match first result"
+msgstr ""
+
+#. module: ea_import
+#: selection:ea_import.template.line,match_limit:0
+msgid "Match last result"
+msgstr ""
+
+#. module: ea_import
+#: view:ea_import.template:0
+msgid "Matching Rules"
+msgstr ""
+
+#. module: ea_import
+#: field:ea_import.template.line.calc_field,operation:0
+msgid "Mathematic operation"
+msgstr ""
+
+#. module: ea_import
+#: field:ea_import.chain.result,name:0
+msgid "Model"
+msgstr ""
+
+#. module: ea_import
+#: code:addons/ea_import/ea_import_template_line.py:167
+#, python-format
+msgid "Model - %s\n"
+"Field - %s\n"
+"There no related field '%s' in %s/%s relation (field is required) \n"
+"Field name: %s \n"
+"Column: %s\n"
+"Row number: %i\n"
+"Row Data: %s"
+msgstr ""
+
+#. module: ea_import
+#: selection:ea_import.chain,type:0
+#: selection:import_wizard,type:0
+msgid "MySql Import"
+msgstr ""
+
+#. module: ea_import
+#: field:ea_import.chain,mysql_config_id:0
+msgid "MySql configuration"
+msgstr ""
+
+#. module: ea_import
+#: view:mysql.config:0
+msgid "Mysql Config"
+msgstr ""
+
+#. module: ea_import
+#: view:mysql.config:0
+msgid "Mysql Configuration"
+msgstr ""
+
+#. module: ea_import
+#: field:ea_export.config,name:0
+#: field:ea_import.chain,name:0
+#: field:ea_import.scheduler,name:0
+#: field:ea_import.scheduler.log,name:0
+#: field:ea_import.template,name:0
+#: field:ea_import.template.line.calc_field,name:0
+#: field:import.ftp_config,name:0
+#: field:mysql.config,name:0
+msgid "Name"
+msgstr ""
+
+#. module: ea_import
+#: code:addons/ea_import/ea_import_chain.py:160
+#, python-format
+msgid "No connection type specified!"
+msgstr ""
+
+#. module: ea_import
+#: selection:ea_export.config,quotechar:0
+msgid "None"
+msgstr ""
+
+#. module: ea_import
+#. openerp-web
+#: code:addons/ea_import/static/src/js/import.js:337
+#, python-format
+msgid "Normal Fields"
+msgstr ""
+
+#. module: ea_import
+#: selection:ea_export.config,query_type:0
+msgid "Object"
+msgstr ""
+
+#. module: ea_import
+#: code:addons/ea_import/ea_import_chain.py:107
+#, python-format
+msgid "Operation prohibitet!"
+msgstr ""
+
+#. module: ea_import
+#: help:ea_import.template.line.calc_field,sequence:0
+msgid "Order of performing"
+msgstr ""
+
+#. module: ea_import
+#: field:import.ftp_config,passwd:0
+#: field:mysql.config,passwd:0
+msgid "Password"
+msgstr ""
+
+#. module: ea_import
+#: field:import.ftp_config,port:0
+#: field:mysql.config,port:0
+msgid "Port"
+msgstr ""
+
+#. module: ea_import
+#: field:ea_import.template,post_import_hook:0
+msgid "Post-import method"
+msgstr ""
+
+#. module: ea_import
+#: help:ea_import.template.line.boolean_field,regexp:0
+msgid "Python Search Regular Expresiion"
+msgstr ""
+
+#. module: ea_import
+#: view:ea_export.config:0
+#: field:mysql.config,query:0
+msgid "Query"
+msgstr ""
+
+#. module: ea_import
+#: field:ea_export.config,query_type:0
+msgid "Query Type"
+msgstr ""
+
+#. module: ea_import
+#: field:ea_export.config,quotechar:0
+msgid "Quotechar"
+msgstr ""
+
+#. module: ea_import
+#. openerp-web
+#: code:addons/ea_import/static/src/js/import.js:80
+#, python-format
+msgid "Quoting:"
+msgstr ""
+
+#. module: ea_import
+#: field:ea_import.template.line,test_result_record_number:0
+msgid "Record Number"
+msgstr ""
+
+#. module: ea_import
+#: field:ea_import.template.line.boolean_field,regexp:0
+#: field:ea_import.template.line.regexp_field,regexp:0
+msgid "Regexp"
+msgstr ""
+
+#. module: ea_import
+#: field:ea_import.template.line,regexp_field_ids:0
+msgid "Regexp Fields"
+msgstr ""
+
+#. module: ea_import
+#: field:ea_import.template.line,related_field:0
+msgid "Related Field"
+msgstr ""
+
+#. module: ea_import
+#: field:ea_import.template.line,related_template_id:0
+msgid "Related Template"
+msgstr ""
+
+#. module: ea_import
+#: field:ea_export.config,model_id:0
+#: field:ea_import.chain,model_id:0
+#: field:import_wizard,model_id:0
+msgid "Related document model"
+msgstr ""
+
+#. module: ea_import
+#. openerp-web
+#: code:addons/ea_import/static/src/js/import.js:338
+#, python-format
+msgid "Relation Fields"
+msgstr ""
+
+#. module: ea_import
+#: field:ea_import.template.line,many2one_rel_type:0
+msgid "Relation type"
+msgstr ""
+
+#. module: ea_import
+#: view:ea_export.config:0
+msgid "Remove report"
+msgstr ""
+
+#. module: ea_import
+#: field:ea_import.template.line.regexp_field,replace_by:0
+msgid "Replace by"
+msgstr ""
+
+#. module: ea_import
+#: field:ea_import.template.line,replace:0
+msgid "Replace field before processing"
+msgstr ""
+
+#. module: ea_import
+#: field:ea_export.config,ir_act_report_id:0
+msgid "Report action"
+msgstr ""
+
+#. module: ea_import
+#: field:ea_import.template.line,required:0
+msgid "Required for creating new"
+msgstr ""
+
+#. module: ea_import
+#: field:ea_import.chain.result,result_ids_file:0
+msgid "Result Ids"
+msgstr ""
+
+#. module: ea_import
+#: view:ea_import.scheduler:0
+msgid "Run Import"
+msgstr ""
+
+#. module: ea_import
+#: selection:ea_export.config,query_type:0
+msgid "SQL"
+msgstr ""
+
+#. module: ea_import
+#: field:ea_export.config,query:0
+msgid "SQL Query"
+msgstr ""
+
+#. module: ea_import
+#: help:ea_export.config,query:0
+msgid "SQL/Object Query For sql use normal syntax: select ref, name from res_partner where id in (%s), etc."
+msgstr ""
+
+#. module: ea_import
+#: view:ea_export.config:0
+msgid "Save/Generate CSV"
+msgstr ""
+
+#. module: ea_import
+#: view:ea_import.scheduler:0
+#: view:ea_import.scheduler.log:0
+msgid "Scheduler Form"
+msgstr ""
+
+#. module: ea_import
+#: field:ea_import.scheduler.log,scheduler_id:0
+msgid "Scheduler ID"
+msgstr ""
+
+#. module: ea_import
+#: field:ea_import.chain.result,scheduler_log_id:0
+msgid "Scheduler Log"
+msgstr ""
+
+#. module: ea_import
+#: view:ea_import.scheduler:0
+msgid "Scheduler Tree"
+msgstr ""
+
+#. module: ea_import
+#. openerp-web
+#: code:addons/ea_import/static/src/js/import.js:181
+#, python-format
+msgid "Semicolon"
+msgstr ""
+
+#. module: ea_import
+#: field:ea_import.chain,separator:0
+msgid "Separator"
+msgstr ""
+
+#. module: ea_import
+#. openerp-web
+#: code:addons/ea_import/static/src/js/import.js:79
+#, python-format
+msgid "Separator:"
+msgstr ""
+
+#. module: ea_import
+#: field:ea_import.template,sequence:0
+#: field:ea_import.template.line,sequence:0
+#: field:ea_import.template.line.calc_field,sequence:0
+msgid "Sequence"
+msgstr ""
+
+#. module: ea_import
+#: view:ea_import.chain.result:0
+msgid "Show Result"
+msgstr ""
+
+#. module: ea_import
+#: view:ea_export.config:0
+#: field:ea_export.config,ir_value_id:0
+#: view:ea_import.chain:0
+msgid "Sidebar button"
+msgstr ""
+
+#. module: ea_import
+#: code:_description:0
+#: model:ir.model,name:ea_import.model_import_wizard
+#, python-format
+msgid "Simple import wizard"
+msgstr ""
+
+#. module: ea_import
+#. openerp-web
+#: code:addons/ea_import/static/src/js/import.js:183
+#, python-format
+msgid "Space"
+msgstr ""
+
+#. module: ea_import
+#: field:ea_import.scheduler.log,state:0
+msgid "State"
+msgstr ""
+
+#. module: ea_import
+#: selection:ea_import.template.line,many2one_rel_type:0
+msgid "Subfield"
+msgstr ""
+
+#. module: ea_import
+#: selection:ea_import.scheduler.log,state:0
+msgid "Success"
+msgstr ""
+
+#. module: ea_import
+#. openerp-web
+#: code:addons/ea_import/static/src/js/import.js:182
+#, python-format
+msgid "Tab"
+msgstr ""
+
+#. module: ea_import
+#: field:ea_import.template,target_model_id:0
+msgid "Target Model"
+msgstr ""
+
+#. module: ea_import
+#: field:ea_import.template.unique.rule,target_field_id:0
+msgid "Target Model Fields"
+msgstr ""
+
+#. module: ea_import
+#: field:ea_import.template.line,target_model_id:0
+msgid "Target Object"
+msgstr ""
+
+#. module: ea_import
+#: selection:ea_import.template.line,many2one_rel_type:0
+#: field:ea_import.template.line,template_id:0
+msgid "Template"
+msgstr ""
+
+#. module: ea_import
+#: view:ea_import.template.line:0
+#: field:ea_import.template.line.boolean_field,template_line_id:0
+#: field:ea_import.template.line.calc_field,template_line_id:0
+#: field:ea_import.template.line.regexp_field,template_line_id:0
+msgid "Template Line"
+msgstr ""
+
+#. module: ea_import
+#: view:ea_import.template.line.boolean_field:0
+msgid "Template Line Boolean Field"
+msgstr ""
+
+#. module: ea_import
+#: view:ea_import.template.line.calc_field:0
+msgid "Template Line Calculated Field"
+msgstr ""
+
+#. module: ea_import
+#: field:ea_import.template.unique.rule,source_field_id:0
+msgid "Template Line Fields"
+msgstr ""
+
+#. module: ea_import
+#: view:ea_import.template.line.regexp_field:0
+msgid "Template Line Regexp Field"
+msgstr ""
+
+#. module: ea_import
+#: field:ea_import.template,line_ids:0
+msgid "Template Lines"
+msgstr ""
+
+#. module: ea_import
+#: field:ea_import.chain,template_ids:0
+#: view:ea_import.template:0
+#: model:ir.ui.menu,name:ea_import.ea_import_template_menu
+msgid "Templates"
+msgstr ""
+
+#. module: ea_import
+#: view:import.ftp_config:0
+#: view:mysql.config:0
+msgid "Test Connection"
+msgstr ""
+
+#. module: ea_import
+#: field:ea_import.chain,input_file:0
+#: field:ea_import.template,test_input_file:0
+msgid "Test Importing File"
+msgstr ""
+
+#. module: ea_import
+#: field:ea_import.template.line,test_result_field:0
+msgid "Test Result"
+msgstr ""
+
+#. module: ea_import
+#: code:addons/ea_import/ea_import_chain.py:143
+#, python-format
+msgid "This import template can be used only from form view!"
+msgstr ""
+
+#. module: ea_import
+#: field:ea_import.template.line,time_format:0
+msgid "Time Format"
+msgstr ""
+
+#. module: ea_import
+#: help:ea_import.chain,type:0
+#: help:import_wizard,type:0
+msgid "Type of connection import will be done from"
+msgstr ""
+
+#. module: ea_import
+#: selection:ea_export.config,charset:0
+#: selection:ea_import.chain,charset:0
+msgid "US-ASCII"
+msgstr ""
+
+#. module: ea_import
+#: selection:ea_export.config,charset:0
+#: selection:ea_import.chain,charset:0
+msgid "Unicode (UTF-16)"
+msgstr ""
+
+#. module: ea_import
+#: selection:ea_export.config,charset:0
+#: selection:ea_import.chain,charset:0
+msgid "Unicode (UTF-7)"
+msgstr ""
+
+#. module: ea_import
+#: selection:ea_export.config,charset:0
+#: selection:ea_import.chain,charset:0
+msgid "Unicode (UTF-8)"
+msgstr ""
+
+#. module: ea_import
+#: field:ea_import.template,update:0
+msgid "Update exist"
+msgstr ""
+
+#. module: ea_import
+#: field:ea_import.template,update_current:0
+msgid "Update only current records"
+msgstr ""
+
+#. module: ea_import
+#: field:ea_import.template.line,use_only_defaults:0
+msgid "Use only defaults"
+msgstr ""
+
+#. module: ea_import
+#: field:import.ftp_config,username:0
+#: field:mysql.config,username:0
+msgid "Username"
+msgstr ""
+
+#. module: ea_import
+#: selection:ea_export.config,charset:0
+#: selection:ea_import.chain,charset:0
+msgid "Western European (ISO)"
+msgstr ""
+
+#. module: ea_import
+#: help:ea_import.template.line.regexp_field,regexp:0
+msgid "You can use all power of python regexp.\n"
+"                              Simple example:\n"
+"                                input string - \"foo\"\n"
+"                                regexp - \"foo\"\n"
+"                                replace_by - \"bar\"\n"
+"                                =================\n"
+"                                result - \"bar\"\n"
+"                              Edvanced example:\n"
+"                                input string - \"football\"\n"
+"                                regexp - \"foo.?\"\n"
+"                                replace_by - \"bar\"\n"
+"                                =================\n"
+"                                result - \"barball\"\n"
+"                              Expert example:\n"
+"                                input string - \"ENAPPS is a cool company\"\n"
+"                                regexp - \"(ENAPPS)( is )(a)(.*)( company)\"\n"
+"                                replace_by - '\\1 LTD\\2an awesome and\\4 British\\5'\n"
+"                                =================\n"
+"                                result - \"ENAPPS LTD is an awesome and cool British company\"\n"
+"                              "
+msgstr ""
+
+#. module: ea_import
+#. openerp-web
+#: code:addons/ea_import/static/src/js/import.js:429
+#, python-format
+msgid "at row %d"
+msgstr ""
+
+#. module: ea_import
+#. openerp-web
+#: code:addons/ea_import/static/src/js/import.js:431
+#, python-format
+msgid "between rows %d and %d"
+msgstr ""
+
+#. module: ea_import
+#: selection:ea_import.template.line,field_type:0
+msgid "binary"
+msgstr ""
+
+#. module: ea_import
+#: selection:ea_import.template.line,field_type:0
+msgid "boolean"
+msgstr ""
+
+#. module: ea_import
+#: selection:ea_import.template.line,field_type:0
+msgid "char"
+msgstr ""
+
+#. module: ea_import
+#: selection:ea_import.template.line,field_type:0
+msgid "date"
+msgstr ""
+
+#. module: ea_import
+#: selection:ea_import.template.line,field_type:0
+msgid "datetime"
+msgstr ""
+
+#. module: ea_import
+#: code:_description:0
+#: model:ir.model,name:ea_import.model_ea_export_config
+#, python-format
+msgid "ea_export.config"
+msgstr ""
+
+#. module: ea_import
+#: code:_description:0
+#: model:ir.model,name:ea_import.model_ea_import_chain
+#, python-format
+msgid "ea_import.chain"
+msgstr ""
+
+#. module: ea_import
+#: code:_description:0
+#: model:ir.model,name:ea_import.model_ea_import_chain_result
+#, python-format
+msgid "ea_import.chain.result"
+msgstr ""
+
+#. module: ea_import
+#: code:_description:0
+#: model:ir.model,name:ea_import.model_ea_import_log
+#, python-format
+msgid "ea_import.log"
+msgstr ""
+
+#. module: ea_import
+#: code:_description:0
+#: model:ir.model,name:ea_import.model_ea_import_log_line
+#, python-format
+msgid "ea_import.log.line"
+msgstr ""
+
+#. module: ea_import
+#: code:_description:0
+#: model:ir.model,name:ea_import.model_ea_import_scheduler
+#, python-format
+msgid "ea_import.scheduler"
+msgstr ""
+
+#. module: ea_import
+#: code:_description:0
+#: model:ir.model,name:ea_import.model_ea_import_scheduler_log
+#, python-format
+msgid "ea_import.scheduler.log"
+msgstr ""
+
+#. module: ea_import
+#: code:_description:0
+#: model:ir.model,name:ea_import.model_ea_import_template
+#, python-format
+msgid "ea_import.template"
+msgstr ""
+
+#. module: ea_import
+#: code:_description:0
+#: model:ir.model,name:ea_import.model_ea_import_template_line
+#, python-format
+msgid "ea_import.template.line"
+msgstr ""
+
+#. module: ea_import
+#: code:_description:0
+#: model:ir.model,name:ea_import.model_ea_import_template_line_boolean_field
+#, python-format
+msgid "ea_import.template.line.boolean_field"
+msgstr ""
+
+#. module: ea_import
+#: code:_description:0
+#: model:ir.model,name:ea_import.model_ea_import_template_line_calc_field
+#, python-format
+msgid "ea_import.template.line.calc_field"
+msgstr ""
+
+#. module: ea_import
+#: code:_description:0
+#: model:ir.model,name:ea_import.model_ea_import_template_line_regexp_field
+#, python-format
+msgid "ea_import.template.line.regexp_field"
+msgstr ""
+
+#. module: ea_import
+#: code:_description:0
+#: model:ir.model,name:ea_import.model_ea_import_template_unique_rule
+#, python-format
+msgid "ea_import.template.unique.rule"
+msgstr ""
+
+#. module: ea_import
+#: view:ea_import.template:0
+msgid "ea_orders Update History"
+msgstr ""
+
+#. module: ea_import
+#: selection:ea_import.template.line,field_type:0
+msgid "float"
+msgstr ""
+
+#. module: ea_import
+#: code:_description:0
+#: model:ir.model,name:ea_import.model_import_ftp_config
+#, python-format
+msgid "import.ftp_config"
+msgstr ""
+
+#. module: ea_import
+#: selection:ea_import.template.line,field_type:0
+msgid "integer"
+msgstr ""
+
+#. module: ea_import
+#: code:_description:0
+#: model:ir.model,name:ea_import.model_ir_actions_report_xml
+#, python-format
+msgid "ir.actions.report.xml"
+msgstr ""
+
+#. module: ea_import
+#: selection:ea_import.template.line,field_type:0
+msgid "many2one"
+msgstr ""
+
+#. module: ea_import
+#: view:ea_import.template.line:0
+msgid "many2one field settings"
+msgstr ""
+
+#. module: ea_import
+#: code:_description:0
+#: model:ir.model,name:ea_import.model_mysql_config
+#, python-format
+msgid "mysql.config"
+msgstr ""
+
+#. module: ea_import
+#: view:import_wizard:0
+msgid "or"
+msgstr ""
+
+#. module: ea_import
+#: field:ea_import.template.line,related_field_model:0
+msgid "related_field_model"
+msgstr ""
+
+#. module: ea_import
+#: selection:ea_import.template.line,field_type:0
+msgid "selection"
+msgstr ""
+
+#. module: ea_import
+#: selection:ea_import.template.line,field_type:0
+msgid "text"
+msgstr ""
+
+#. module: ea_import
+#: field:ea_import.chain.result,chain_id:0
+#: field:ea_import.chain.result,log_id:0
+msgid "unknown"
+msgstr ""
+

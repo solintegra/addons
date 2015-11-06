@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <!-- Definimos la accion --> 
+
+        <record model="ir.ui.view" id="course_form_view">
+            <field name="name">course.form</field>
+            <field name="model">planificacion.cursos</field>
+            <field name="arch" type="xml">
+                <form string="Course Form">
+                    <sheet>
+                        <group>
+                            <field name="active"/>
+                            <field name="name"/>
+                            <field name="institucion"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        
+        <record model="ir.actions.act_window" id="curso_list_action">
+            <field name="name">Cursos</field>
+            <field name="res_model">planificacion.cursos</field>
+            <field name="view_mode">tree,form</field>            
+        </record>
+
+        <record model="ir.ui.view" id="nivel_form_view">
+            <field name="name">nivel.form</field>
+            <field name="model">planificacion.nivel</field>
+            <field name="arch" type="xml">
+                <form string="Formulario Niveles">
+                    <sheet>
+                        <group>
+                            <field name="active"/>                            
+                            <field name="name"/>
+                            <field name="institucion"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="nivel_list_action">
+            <field name="name">Niveles</field>
+            <field name="res_model">planificacion.nivel</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record model="ir.ui.view" id="nivel_curso_form_view">
+            <field name="name">nivel_curso.form</field>
+            <field name="model">planificacion.nivel_curso</field>
+            <field name="arch" type="xml">
+                <form string="Formulario Niveles Curso">
+                    <sheet>
+                        <group>
+                            <field name="active"/>                            
+                            <field name="name"/>
+                            <field name="institucion"/>
+                            <field name="nivel_id"/>
+                            <field name="cursos_id"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="nivel_curso_list_action">
+            <field name="name">Niveles_Cursos</field>
+            <field name="res_model">planificacion.nivel_curso</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record model="ir.ui.view" id="asignatura_form_view">
+            <field name="name">asignatura.form</field>
+            <field name="model">planificacion.asignaturas</field>
+            <field name="arch" type="xml">
+                <form string="Formulario Asignaturas">
+                    <sheet>
+                        <group>
+                            <field name="active"/>
+                            <field name="name"/>
+                            <field name="institucion"/>
+                            <field name="horas"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="asignaturas_list_action">
+            <field name="name">Asignaturas</field>
+            <field name="res_model">planificacion.asignaturas</field>
+            <field name="view_mode">tree,form</field>            
+        </record>
+
+        <record model="ir.ui.view" id="asignatura_niveles_form_view">
+            <field name="name">asignatura_niveles.form</field>
+            <field name="model">planificacion.asignaturas_niveles</field>
+            <field name="arch" type="xml">
+                <form string="Formulario Asignaturas Niveles">
+                    <sheet>
+                        <group>
+                            <field name="active"/>
+                            <field name="name"/>
+                            <field name="institucion"/>
+                            <field name="asignatura_id"/>
+                            <field name="nivel_id"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="asignaturas_niveles_list_action">
+            <field name="name">Asignaturas Niveles</field>
+            <field name="res_model">planificacion.asignaturas_niveles</field>
+            <field name="view_mode">tree,form</field>            
+        </record>
+
+        <record model="ir.ui.view" id="ejes_form_view">
+            <field name="name">ejes.form</field>
+            <field name="model">planificacion.ejes</field>
+            <field name="arch" type="xml">
+                <form string="Formulario Ejes">
+                    <sheet>
+                        <group>
+                            <field name="active"/>
+                            <field name="name"/>
+                            <field name="institucion"/>
+                            <field name="nivel_id"/>
+                            <field name="asignatura_id"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="ejes_list_action">
+            <field name="name">Ejes</field>
+            <field name="res_model">planificacion.ejes</field>
+            <field name="view_mode">tree,form</field>            
+        </record>
+
+        <record model="ir.ui.view" id="tipos_form_view">
+            <field name="name">tipos.form</field>
+            <field name="model">planificacion.tipo</field>
+            <field name="arch" type="xml">
+                <form string="Formulario Tipos">
+                    <sheet>
+                        <group>
+                            <field name="active"/>
+                            <field name="name"/>
+                            <field name="institucion"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="tipo_list_action">
+            <field name="name">Tipos</field>
+            <field name="res_model">planificacion.tipo</field>
+            <field name="view_mode">tree,form</field>            
+        </record>
+
+        <record model="ir.ui.view" id="curriculo_form_view">
+            <field name="name">curriculo.form</field>
+            <field name="model">planificacion.curriculo</field>
+            <field name="arch" type="xml">
+                <form string="Formulario Curriculo">
+                    <sheet>
+                        <group>
+                            <field name="active"/>
+                            <field name="name"/>
+                            <field name="institucion"/>
+                            <field name="nivel_id"/>
+                            <field name="asignatura_id"/>
+                            <field name="tipo_id"/>
+                            <field name="unidad_id"/>
+                            <notebook colspan="4">
+                                <page string="Indicadores"> 
+                                    <field name="indicadores_ids"/>                                 
+                                </page>
+                            </notebook>                           
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="curriculo_tree_view">
+        <field name="name">Curriculo</field>
+        <field name="model">planificacion.curriculo</field>
+        <field name="arch" type="xml">
+            <tree string="Curriculo">
+                <field name="name"/>
+                <field name="nivel_id"/>
+                <field name="asignatura_id"/>
+                <field name="tipo_id"/>
+                <field name="unidad_id"/>
+            </tree>
+        </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="curriculo_list_action">
+            <field name="name">Curriculo</field>
+            <field name="res_model">planificacion.curriculo</field>
+            <field name="view_mode">tree,form</field>            
+        </record>
+
+        <record model="ir.ui.view" id="indicadores_form_view">
+            <field name="name">indicadores.form</field>
+            <field name="model">planificacion.indicadores</field>
+            <field name="arch" type="xml">
+                <form string="Formulario Indicadores">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="indicadores_list_action">
+            <field name="name">Indicadores</field>
+            <field name="res_model">planificacion.indicadores</field>
+            <field name="view_mode">tree,form</field>            
+        </record>
+
+        <record model="ir.ui.view" id="unidades_form_view">
+            <field name="name">unidades.form</field>
+            <field name="model">planificacion.unidades</field>
+            <field name="arch" type="xml">
+                <form string="Formulario Unidades">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="active"/>
+                            <field name="institucion"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="unidades_list_action">
+            <field name="name">Unidades</field>
+            <field name="res_model">planificacion.unidades</field>
+            <field name="view_mode">tree,form</field>            
+        </record>
+         
+        <!-- menu superior o principal: no hereda de otro menu -->
+        <menuitem id="main_planificacion_menu" name="Planificacion"/>
+ 
+        <!-- Definimos un menu de solo vista, este menu tiene como menu padre a Cursos -->
+        <menuitem id="open_planificacion_menu" name="Planificacion Academica" parent="main_planificacion_menu"/>
+        <!-- Definimos otro menu que tiene como menu padre a Curso academicos.-->
+        <menuitem id="courses_menu" name="Cursos" parent="open_planificacion_menu" action="curso_list_action"/>
+
+        <menuitem id="niveles_menu" name="Niveles" parent="open_planificacion_menu" action="nivel_list_action"/>
+
+        <menuitem id="niveles_curso_menu" name="Niveles_Cursos" parent="open_planificacion_menu" action="nivel_curso_list_action"/>
+
+        <menuitem id="asignaturas_menu" name="Asignaturas" parent="open_planificacion_menu" action="asignaturas_list_action"/>
+
+        <menuitem id="asignaturas_nivel_menu" name="Asignaturas Niveles" parent="open_planificacion_menu" action="asignaturas_niveles_list_action"/>
+
+        <menuitem id="ejes_menu" name="Ejes" parent="open_planificacion_menu" action="ejes_list_action"/>
+
+        <menuitem id="tipo_menu" name="Tipos" parent="open_planificacion_menu" action="tipo_list_action"/>
+
+        <menuitem id="unidades_menu" name="Unidades" parent="open_planificacion_menu" action="unidades_list_action"/>
+
+        <menuitem id="curriculo_menu" name="Curriculo" parent="open_planificacion_menu" action="curriculo_list_action"/>
+
+        <!-- <menuitem id="indicadores_menu" name="Indicadores" parent="open_planificacion_menu" action="indicadores_list_action"/>-->
+ 
+    </data>
+</openerp>

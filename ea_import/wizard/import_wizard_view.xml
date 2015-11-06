@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record id="view_import_wizard_form" model="ir.ui.view">
+            <field name="name">import_wizard.form</field>
+            <field name="model">import_wizard</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Import Wizard" version="7.0">
+                    <group>
+                        <field name="model_id" attrs="{'invisible': 1}"/>
+                        <field name="chain_id" on_change="onchange_chain_id(chain_id)" options="{'no_open': 1, 'no_create': 1}"/>
+                        <field name="type" attrs="{'invisible': 1}"/>
+                        <field name="date" attrs="{'invisible': [('type', '!=', 'po3')]}"/>
+                        <field name="import_file" attrs="{'invisible': [('type', '!=', 'csv'), ('type', '!=', 'po3')], 'required': [('type', '=', 'csv'), ('type', '=', 'po3')]}"/>
+                    </group>
+                    <footer>
+                        <button string="Import" type="object" name="do_import" default_focus="1" class="oe_highlight"/>
+                        or
+                        <button string="Cancel" class="oe_link" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+    </data>
+</openerp>
