@@ -251,7 +251,8 @@ class sale_order(osv.osv):
         'section_id': fields.many2one('crm.case.section', 'Sales Team'),
         'procurement_group_id': fields.many2one('procurement.group', 'Procurement group', copy=False),
         'product_id': fields.related('order_line', 'product_id', type='many2one', relation='product.product', string='Product'),
-        #CAMPOS ANADIDOS PARA MARJUN
+        #CAMPOS ANADIDOS PARA MARjUN###
+        ###############################
         'metodo_despacho' : fields.selection ([('v1','Inmediato'),('v2','Posterior'),('v3','A Domicilio')],'Metodo de Despacho'),
         'documento_tributario' : fields.selection ([('v1','Factura'),('v2','Boleta')],'Documento Tributario'),
         #'rut': fields.char('RUT', readonly=True, required=True, states={'draft': [('readonly', False)], 'sent': [('readonly', False)]}, help="RUT del cliente"),

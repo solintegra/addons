@@ -21,9 +21,9 @@ class ProductAttributeValue(models.Model):
     product_tmpl_id = fields.Many2one('product.template',
                                   string='roduct Template')
 
-    size_x = fields.Float('Width')
-    size_y = fields.Float('Length')
-    size_z = fields.Float('Thickness')
+    size_x = fields.Float('Largo')
+    size_y = fields.Float('Ancho/Alto')
+    size_z = fields.Float('qty')
 
 
 class ProductAttributeqty(models.Model):
@@ -40,9 +40,9 @@ class ProductAttributeqty(models.Model):
 
     value_id = fields.Many2one('product.attribute.value', string = 'Valores')
     attribute_id = fields.Many2one('product.attribute', string = 'Atributos')
-    size_x = fields.Float('Width')
-    size_y = fields.Float('Length')
-    size_z = fields.Float('Thickness')
+    size_x = fields.Float('Largo')
+    size_y = fields.Float('Ancho/Alto')
+    size_z = fields.Float('qty')
 
 class ProductAttributePrice(models.Model):
     _inherit = "product.attribute.price"
@@ -50,9 +50,9 @@ class ProductAttributePrice(models.Model):
     raw_product = fields.Many2one('product.product',
                                   string='Raw Product')
     raw_qty = fields.Float(string='Raw Product QTY', default=1.)
-    size_x = fields.Float('Width', default=1.)
-    size_y = fields.Float('Length', default=1.)
-    size_z = fields.Float('Thickness', default=1.)
+    size_x = fields.Float('Largo', default=1.)
+    size_y = fields.Float('Ancho', default=1.)
+    size_z = fields.Float('qty', default=1.)
 
     
 

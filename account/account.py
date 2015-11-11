@@ -1114,6 +1114,7 @@ class account_journal_period(osv.osv):
 
     _columns = {
         'name': fields.char('Journal-Period Name', required=True),
+        ### MODIFICADO A READ ONLY PARA REQUERIMIENTO DE MARJUN 10-2015##################
         'journal_id': fields.many2one('account.journal', 'Journal', required=True, readonly=True,ondelete="cascade"),
         'period_id': fields.many2one('account.period', 'Period', required=True, ondelete="cascade"),
         'icon': fields.function(_icon_get, string='Icon', type='char'),
@@ -2393,6 +2394,7 @@ class account_model_line(osv.osv):
         'quantity': fields.float('Quantity', digits_compute=dp.get_precision('Account'), help="The optional quantity on entries."),
         'debit': fields.float('Debit', digits_compute=dp.get_precision('Account')),
         'credit': fields.float('Credit', digits_compute=dp.get_precision('Account')),
+        ##### MODIFICADO A READ ONLY PARA REQUERIMIENTO DE MATJUN 10-2015##################################
         'account_id': fields.many2one('account.account', 'Account', required=True, readonly=True, ondelete="cascade"),
         'analytic_account_id': fields.many2one('account.analytic.account', 'Analytic Account', ondelete="cascade"),
         'model_id': fields.many2one('account.model', 'Model', required=True, ondelete="cascade", select=True),
