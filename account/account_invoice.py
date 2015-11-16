@@ -193,9 +193,12 @@ class account_invoice(models.Model):
         help="Reference of the document that produced this invoice.",
         readonly=True, states={'draft': [('readonly', False)]})
     ### MODIFICADO A REQUERIDO, POR REQUERIMIENTO DE MARJUN 10-2015#######
+    #### SE QUITO EL REQUERIDO, YA QUE GENERA ERROR AL CREAR FACTURA DE VENTA
+    #### EL CAMPO ES OCUPADO IGUALMENTE EN FACTURA DE VENTA, Y AL ESTAR EN NULL 
+    #### EL CAMPO FACTURA DEL PROVEEDOR, DISPARA EL ERROR#################
     supplier_invoice_number = fields.Char(string='Supplier Invoice Number',
         help="The reference of this invoice as provided by the supplier.",
-        required =True, states={'draft': [('readonly', False)]})
+        states={'draft': [('readonly', False)]})
     type = fields.Selection([
             ('out_invoice','Customer Invoice'),
             ('in_invoice','Supplier Invoice'),

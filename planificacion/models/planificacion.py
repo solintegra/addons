@@ -124,6 +124,7 @@ class planificacion_curriculo(models.Model):
     unidad_id = fields.Many2one ('planificacion.unidades', 'Unidad')
     tipo_id = fields.Many2one ('planificacion.tipo', 'Tipo')
     indicadores_ids = fields.One2many('planificacion.indicadores', 'curriculo_id', 'Indicadores')
+    clase_line = fields.Many2one('planificacion.clases.line', 'Renglon')
 
 
 class planificacion_indicadores(models.Model):
@@ -132,39 +133,35 @@ class planificacion_indicadores(models.Model):
 
     curriculo_id = fields.Many2one('planificacion.curriculo', 'Curriculo')
     name = fields.Text('Descripcion', required=True, help = 'Ingrese los Indicadores')
-    #description = fields.Text()
-    #active = fields.Boolean('Active', default=True)
-    #institucion = fields.Many2one('res.company', default = lambda self: self.env.user.company_id.name, string="Colegio")
-    #nivel_id = fields.Many2one ('planificacion.nivel', 'niveles')
-    #Asignatura_id = fields.Many2one ('planificacion.asignaturas', 'Asignaturas')
-    #unidad_id = fields.Many2one ('planificacion.unidades', 'Unidad')    
-    #tipo_id = fields.Many2one ('planificacion.tipo', 'Tipo')
+    
 
 class planificacion_clases(models.Model):
-    _name = 'planificacion.clase'
+    _name = 'planificacion.clases'
     _description = 'Formulario de Clases'
+#    
+#    @api.one
+#    @api.depends('attribute', 'sale_line.product_template',
+#                 'sale_line.product_template.attribute_line_ids')
+#    def _get_possible_attribute_values(self): 
+#        attr_values = self.env['product.attribute.name']
+#        for curr_line in self.sale_line.product_template.attribute_line_ids:
+#            if attr_line.attribute_id.id == self.attribute.id:
+#                attr_values |= attr_line.value_ids
+#        self.possible_values = attr_values.sorted()
+
+#    @api.one
+#    @api.depends('attribute', 'sale_line.product_template',
+#                 'sale_line.product_template.attribute_line_ids')
     
-    @api.one
-    @api.depends('attribute', 'sale_line.product_template',
-                 'sale_line.product_template.attribute_line_ids')
-    def _get_possible_attribute_values(self): 
-        attr_values = self.env['product.attribute.name']
-        for curr_line in self.sale_line.product_template.attribute_line_ids:
-            if attr_line.attribute_id.id == self.attribute.id:
-                attr_values |= attr_line.value_ids
-        self.possible_values = attr_values.sorted()
+    #def _get_curriculo(self): 
+    #    curr_values = self.env['planificacion.curriculo.name']
+    #    for curr_line in self.sale_line.product_template.attribute_line_ids:
+    #        if attr_line.attribute_id.id == self.attribute.id:
+    #            attr_values |= attr_line.value_ids
+    #    self.possible_values = attr_values.sorted()
 
-    @api.one
-    @api.depends('attribute', 'sale_line.product_template',
-                 'sale_line.product_template.attribute_line_ids')
-    def _get_curriculo(self): 
-        curr_values = self.env['planificacion.curriculo.name']
-        for curr_line in self.sale_line.product_template.attribute_line_ids:
-            if attr_line.attribute_id.id == self.attribute.id:
-                attr_values |= attr_line.value_ids
-        self.possible_values = attr_values.sorted()
-
-
+    nivel_id = fields.Many2one ('planificacion.nivel', 'niveles')
+    asignatura_id = fields.Many2one ('planificacion.asignaturas', 'Asignaturas')
     name = fields.Char('Descripcion', required=True, help = 'Ingrese El nombre de la clase')
     active = fields.Boolean('Active', default=True)
     objetivo = fields.Text('Objetivo', required=True, help = 'Ingrese El Objetivo de la clase')
@@ -174,13 +171,22 @@ class planificacion_clases(models.Model):
     evaluacion = fields.Text('Evaluacion', required=True, help = 'Evaluacon de la clase')
     recursos = fields.Text('Recursos', required=True, help = 'Recursos de la clase')    
     institucion = fields.Many2one('res.company', default = lambda self: self.env.user.company_id.name, string="Colegio")
-    nivel_id = fields.Many2one ('planificacion.nivel', 'niveles')
-    asignatura_id = fields.Many2one ('planificacion.asignaturas', 'Asignaturas')
+    #nivel_id = fields.Many2one ('planificacion.nivel', 'niveles')
+    #asignatura_id = fields.Many2one ('planificacion.asignaturas', 'Asignaturas')
     fecha = fields.Datetime('Fecha')
-    name_curriculo = fields.Many2many(comodel_name='planificacion.curriculo.name',
-        compute='_get_curriculo', readonly=True)
+    clase_line_ids = fields.One2many('planificacion.clases.line', 'clase_id', 'Curriculos')
+    #name_curriculo = fields.Many2many(comodel_name='planificacion.curriculo.name',
+    #    compute='_get_curriculo', readonly=True)
     #unidad_id = fields.Many2one ('planificacion.unidades', 'Unidad')
     #tipo_id = fields.Many2one ('planificacion.tipo', 'Tipo')
     #indicadores_ids = fields.One2many('planificacion.indicadores', 'curriculo_id', 'Indicadores')
 
+class planif_clases_curric_line(models.Model):
+    _name = 'planificacion.clases.line'
+    _description = 'Curriculo asociado a las clases'
 
+    clase_id = fields.Many2one('planificacion.clases', 'Clase')
+    name = fields.Text('Descripcion', required=True, help = 'Ingrese los Indicadores')
+    curriculo_ids = fields.One2many('planificacion.curriculo', 'clase_line', 'Clases')
+    indicadores_ids = fields.Many2many('planificacion.curriculo', 'planif_clas__curr_rel', 'clase_id', 'indicadores_ids', 'Indicadores Lines', readonly=True, copy=False)
+    

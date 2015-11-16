@@ -252,6 +252,55 @@
             <field name="res_model">planificacion.unidades</field>
             <field name="view_mode">tree,form</field>            
         </record>
+
+        <record model="ir.ui.view" id="clase_form_view">
+            <field name="name">clase.form</field>
+            <field name="model">planificacion.clases</field>
+            <field name="arch" type="xml">
+                <form string="Formulario Clases">
+                    <sheet>
+                        <group>
+                            <field name="active"/>
+                            <field name="fecha"/>
+                            <field name="nivel_id"/>
+                            <field name="asignatura_id"/>
+                            <field name="name"/>
+                            <field name="institucion"/>
+                            <field name="objetivo"/>
+                            <field name="inicio"/>
+                            <field name="desarrollo"/>
+                            <field name="cierre"/>
+                            <field name="evaluacion"/>
+                            <field name="recursos"/>
+                            <notebook colspan="4">
+                                <page string="Curriculo"> 
+                                    <field name="clase_line_ids"/>                                 
+                                </page>
+                            </notebook>                           
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="clases_tree_view">
+        <field name="name">Clases</field>
+        <field name="model">planificacion.clases</field>
+        <field name="arch" type="xml">
+            <tree string="Clases">
+                <field name="name"/>
+                <field name="fecha"/>
+                <field name="asignatura_id"/>
+                <field name="nivel_id"/>
+            </tree>
+        </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="clases_list_action">
+            <field name="name">Clases</field>
+            <field name="res_model">planificacion.clases</field>
+            <field name="view_mode">tree,form</field>            
+        </record>
          
         <!-- menu superior o principal: no hereda de otro menu -->
         <menuitem id="main_planificacion_menu" name="Planificacion"/>
@@ -276,6 +325,8 @@
         <menuitem id="unidades_menu" name="Unidades" parent="open_planificacion_menu" action="unidades_list_action"/>
 
         <menuitem id="curriculo_menu" name="Curriculo" parent="open_planificacion_menu" action="curriculo_list_action"/>
+
+        <menuitem id="clases_menu" name="Clases" parent="open_planificacion_menu" action="clases_list_action"/>
 
         <!-- <menuitem id="indicadores_menu" name="Indicadores" parent="open_planificacion_menu" action="indicadores_list_action"/>-->
  
