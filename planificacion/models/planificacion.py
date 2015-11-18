@@ -186,7 +186,6 @@ class planif_clases_curric_line(models.Model):
     _description = 'Curriculo asociado a las clases'
 
     clase_id = fields.Many2one('planificacion.clases', 'Clase')
-    name = fields.Text('Descripcion', required=True, help = 'Ingrese los Indicadores')
     curriculo_ids = fields.One2many('planificacion.curriculo', 'clase_line', 'Clases')
     indicadores_ids = fields.Many2many('planificacion.curriculo', 'planif_clas__curr_rel', 'clase_id', 'indicadores_ids', 'Indicadores Lines', readonly=True, copy=False)
     

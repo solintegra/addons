@@ -301,6 +301,27 @@
             <field name="res_model">planificacion.clases</field>
             <field name="view_mode">tree,form</field>            
         </record>
+
+        <record model="ir.ui.view" id="clases_line_form_view">
+            <field name="name">planificacion.clases.line.form</field>
+            <field name="model">planificacion.clases.line</field>
+            <field name="arch" type="xml">
+                <form string="Formulario Clases curriculo">
+                    <sheet>
+                        <group>
+                            <field name="curriculo_ids"/>
+                            <field name="indicadores_ids"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="clases_line_list_action">
+            <field name="name">clases_line</field>
+            <field name="res_model">planificacion.clases.line</field>
+            <field name="view_mode">tree,form</field>            
+        </record>
          
         <!-- menu superior o principal: no hereda de otro menu -->
         <menuitem id="main_planificacion_menu" name="Planificacion"/>
