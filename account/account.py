@@ -1259,7 +1259,7 @@ class account_move(osv.osv):
         'name': fields.char('Number', required=True, copy=False),
         'ref': fields.char('Reference', copy=False),
         'period_id': fields.many2one('account.period', 'Period', required=True, states={'posted':[('readonly',True)]}),
-        'journal_id': fields.many2one('account.journal', 'Journal', required=True, readonly=True, states={'posted':[('readonly',True)]}),
+        'journal_id': fields.many2one('account.journal', 'Journal', required=True, states={'posted':[('readonly',True)]}),
         'state': fields.selection(
               [('draft','Unposted'), ('posted','Posted')], 'Status',
               required=True, readonly=True, copy=False,
