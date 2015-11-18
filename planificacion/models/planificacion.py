@@ -180,6 +180,7 @@ class planificacion_clases(models.Model):
     #unidad_id = fields.Many2one ('planificacion.unidades', 'Unidad')
     #tipo_id = fields.Many2one ('planificacion.tipo', 'Tipo')
     #indicadores_ids = fields.One2many('planificacion.indicadores', 'curriculo_id', 'Indicadores')
+    #
 
 class planif_clases_curric_line(models.Model):
     _name = 'planificacion.clases.line'
